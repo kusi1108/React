@@ -7,7 +7,7 @@ const messages = [
 ];
 
 //we can only use hooks on the top level of function
-//export is for to make components functions variables or objects available to other files
+//export is for to make components functions variables or objects available to other
 export default function App() {
   const [step, setStep] = useState(1); //usestate function is called a hook in react
   // const arr = useState(1);
@@ -27,9 +27,9 @@ export default function App() {
   return (
     <div className="steps">
       <div className="numbers">
-        <div className={`${step >= 1 ? "active" : ""}`}>1</div>
-        <div className={`${step >= 2 ? "active" : ""}`}>2</div>
-        <div className={`${step >= 3 ? "active" : ""}`}>3</div>
+        <div className={step >= 1 ? "active" : ""}>1</div>
+        <div className={step >= 2 ? "active" : ""}>2</div>
+        <div className={step >= 3 ? "active" : ""}>3</div>
       </div>
       <p className="message">
         Step {step}:{messages[step - 1]}
